@@ -1,0 +1,27 @@
+/*RESET*/
+/*Removeu as margins que vem por padrão no navegador (ficou tudo colado)*/
+*, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+}
+input, select, iframe, button{
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3{
+    margin: 0;
+    padding: 0;
+}
+ol, ul{
+    list-style: none;
+}
+/*removeu a decoração e pegou a cor do navegador*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*fica essa cor ao passar o mouse*/
+a:hover{
+    color: #f9014d;
+}
