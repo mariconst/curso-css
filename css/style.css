@@ -1,4 +1,5 @@
-/*RESET*/
+/*RESET
+------------------------------------------------------------------*/
 /*Removeu as margins que vem por padrão no navegador (ficou tudo colado)*/
 *, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}
 body{
@@ -24,4 +25,74 @@ a{
 /*fica essa cor ao passar o mouse*/
 a:hover{
     color: #f9014d;
+}
+
+/*HEADER
+------------------------------------------------------------------*/
+.header{
+    display: none;
+}
+
+/*SECTION
+------------------------------------------------------------------*/
+.section{
+    float: left;
+    width: 100%;
+}
+
+
+/*SEARCH E ESTATISTICAS
+------------------------------------------------------------------*/
+.search-box{
+    text-align: center;
+    color: white;
+    padding: 100px 0;
+    background-image: url(../images/bg-search.jpg);
+    /*O cover ajusta a imagem dentro do box*/
+    background-size: cover;
+    background-position: center;
+    /*Ao rolar a barra a img fica fixa*/
+    background-attachment: fixed;
+}
+/*Como só tem um h1 não é necessário passar o header*/
+.search-box h1{
+    font-size: 37px;
+    font-weight: bold;
+}
+.search-box .tagline{
+    font-size: 26px;
+}
+.search-box form{
+    position: relative; 
+    display: inline-block;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 40px;
+}
+.search-box input[type="search"]{
+    width: 100%;
+    height: 50px;
+    /*Pega do navegador (vai pegar 16px)*/
+    font-size: inherit;
+    color: #2c3e50;
+    padding: 0 10px;
+    border-radius: 6px;
+    /*Para os navegadores entenderem essa propriedade*/
+    -webkit-border-radius: 6px;
+}
+.search-box button{
+    background: #a70606;
+    /*O botão será um elemento absoluto no html e vai ficar ao lado do input*/
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: white;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    -webkit-border-top-right-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+
 }
