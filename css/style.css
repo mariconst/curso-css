@@ -143,7 +143,35 @@ a:hover{
     /*menu*/
     .nav-toggle{
         color: #ffffff;
+        font-size: 22px;
     }
+
+    .nav-close{
+        font-size: 22px;
+
+    }
+
+    .header .nav.active{
+        right: 0;
+    }
+
+    .header .nav{
+        background: #ffffff;
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        padding: 15px;
+        right: -100%;
+        top: 0;
+        z-index: 10;
+        transition: right .7s ease-in-out;
+    }
+    .header .nav ul li{
+        padding: 15px 5px;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
     .estatisticas{
         flex-direction: column;
     }
@@ -163,6 +191,14 @@ a:hover{
 /*BREAKPOINTS MÍNIMO
 ------------------------------------------------------------------*/
 @media (min-width: 768px){
+    /*menu*/
+    .nav-toggle, .nav-close{
+        display: none;
+    }
+    .header .nav{
+        float: right;
+        margin-top: 20px;
+    }
     .search-box {
         padding: 200px 0;
     }
@@ -179,3 +215,13 @@ a:hover{
         border-right: 1px solid #ccc;
     }
 }
+
+/*AUXILIARES
+------------------------------------------------------------------*/
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.fl-left{float: left;}
+.fl-right{float: right;}
+
