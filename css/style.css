@@ -26,6 +26,7 @@ a{
 a:hover{
     color: #f9014d;
 }
+img{max-width: 100%; border: none;}
 
 /*GERAIS
 ------------------------------------------------------------------*/
@@ -54,6 +55,38 @@ a:hover{
 .row{
     float: left;
     width: 100%;
+}
+
+/*BOX
+------------------------------------------------------------------*/
+.box{
+    display: block;
+    position: relative;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;    
+}
+
+.box-name{
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 10px;
+    background: #f9014d;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;   
+}
+
+.box-detalhes{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
 }
 
 /*HEADER
