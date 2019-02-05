@@ -35,8 +35,12 @@ img{max-width: 100%; border: none;}
     width: 100%;
 }
 
+.section:not(:first-of-type){
+    margin-top: 60px;
+}
+
 .section-header{
-    margin-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
     font-size: 20px;
 }
@@ -63,7 +67,8 @@ img{max-width: 100%; border: none;}
     display: block;
     position: relative;
     -webkit-border-radius: 10px;
-    border-radius: 10px;    
+    border-radius: 10px;  
+    overflow: hidden;
 }
 
 .box-name{
@@ -79,6 +84,21 @@ img{max-width: 100%; border: none;}
     border-radius: 5px;   
 }
 
+.box-cover{
+    font-size: 0;
+    /**16px*/
+    line-height: 1em;
+}
+
+.box-cover img{
+    width: 100%;
+    /*TRANFORMOU A IMGEM. AUMENTOU ELA EM 1.1*/
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
 .box-detalhes{
     position: absolute;
     width: 100%;
@@ -87,6 +107,55 @@ img{max-width: 100%; border: none;}
     padding: 15px;
     color: #fff;
     font-size: 15px;
+}
+
+
+.box-detalhes:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .8;
+    visibility: hidden;
+    background: linear-gradient(to bottom, transparent, #000000);
+
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    -webkit-transform: translate(0,5);
+    transform: translate(0,50%);
+}
+
+.box-detalhes-info{
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    -webkit-transform: translate(0,50%);
+    transform: translate(0,50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.box-detalhes-info h1{
+    font-size: 20px;
+}
+/*ESTÁ ATINGINDO OS 2 ELEMENTOS*/
+.box:hover .box-detalhes:before,
+.box:hover .box-detalhes-info{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+.box:hover .box-cover img{
+    /*TRANFORMOU A IMGEM. VOLTOU ELA PARA O TAMANHO ORIGINAL*/
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    
 }
 
 /*HEADER
@@ -185,6 +254,15 @@ img{max-width: 100%; border: none;}
 .estatisticas-item p{
     font-size: 20px;
 }
+
+
+/*DESTINOS
+------------------------------------------------------------------*/
+.destinos-col{
+    margin-bottom: 20px;
+}
+
+
 
 /*BREAKPOINTS MÁXIMOS
 ------------------------------------------------------------------*/
